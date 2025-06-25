@@ -5,7 +5,7 @@ import EventCard from "./EventCard";
 
 const EventsGrid = ({ events, onSelectEvent, layout = "grid" }) => {
 
-  const [sortDir, setSortDir] = useState("asc"); 
+  const [sortDir, setSortDir] = useState("asc");
 
   const toggleSortDir = useCallback(() => {
     setSortDir((dir) => (dir === "asc" ? "desc" : "asc"));
@@ -25,6 +25,14 @@ const EventsGrid = ({ events, onSelectEvent, layout = "grid" }) => {
     layout === "list"
       ? "space-y-4"
       : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6";
+
+  if (!sortedEvents.length) {
+    return (
+      <section>
+        <div className="text-center text-gray-500 py-8">No events found.</div>
+      </section>
+    );
+  }
 
   return (
     <section>

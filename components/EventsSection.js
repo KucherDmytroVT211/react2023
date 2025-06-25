@@ -2,6 +2,10 @@
 
 import { useState, useMemo, useCallback, memo } from "react";
 import EventsGrid from "./EventsGrid";
+import HighlightBanner from "./HighlightBanner";
+import React, { Suspense, lazy } from "react";
+
+const EventStats = lazy(() => import("./EventStats"));
 
 const EventsSection = ({ initialEvents, title, highlightColor = "#2563eb" }) => {
   const [query, setQuery] = useState("");
@@ -25,6 +29,14 @@ const EventsSection = ({ initialEvents, title, highlightColor = "#2563eb" }) => 
       <h1 className="text-3xl font-bold mb-6" style={{ color: highlightColor }}>
         {title}
       </h1>
+
+      <HighlightBanner show={filteredEvents.length > 3}>
+        Wow! There are many charity events happening. Join and make a difference!
+      </HighlightBanner>
+
+      <Suspense fallback={<div className="mb-4 text-gray-400 text-center">Loading stats...</div>}>
+        <EventStats events={filteredEvents} />
+      </Suspense>
 
       <input
         type="text"
