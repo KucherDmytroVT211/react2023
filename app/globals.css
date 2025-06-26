@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-:root.light-theme, .light-theme:root, .light-theme {
+:root.light-theme,
+.light-theme:root,
+.light-theme {
   --background: #f8fafc;
   --foreground: #0f172a;
   --muted: #e2e8f0;
@@ -8,7 +10,9 @@
   --accent: #2563eb;
 }
 
-:root.dark-theme, .dark-theme:root, .dark-theme {
+:root.dark-theme,
+.dark-theme:root,
+.dark-theme {
   --background: #0f172a;
   --foreground: #f1f5f9;
   --muted: #1e293b;
@@ -23,8 +27,6 @@
   --card: #ffffff;
   --accent: #2563eb;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -59,10 +61,18 @@ select {
   border: 1px solid var(--muted);
 }
 
-.bg-background { background: var(--background); }
-.bg-muted { background: var(--muted); }
-.bg-accent { background: var(--accent); }
-.text-foreground { color: var(--foreground); }
+.bg-background {
+  background: var(--background);
+}
+.bg-muted {
+  background: var(--muted);
+}
+.bg-accent {
+  background: var(--accent);
+}
+.text-foreground {
+  color: var(--foreground);
+}
 
 .card {
   background: var(--card);
