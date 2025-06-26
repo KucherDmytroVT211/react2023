@@ -6,6 +6,7 @@ import HighlightBanner from "./HighlightBanner";
 import React, { Suspense, lazy } from "react";
 import useHighlightColor from "./useHighlightColor";
 import { useRef, useEffect } from "react";
+import SuggestEventForm from "./SuggestEventForm";
 
 const EventStats = lazy(() => import("./EventStats"));
 
@@ -120,6 +121,7 @@ const EventsSection = ({ title, highlightColor: highlightColorProp }) => {
           layout="grid"
         />
       )}
+      <SuggestEventForm />
     </section>
   );
 };
