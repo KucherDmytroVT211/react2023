@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback, memo } from "react";
+import ThemeToggle from "./ThemeToggle";
 import EventsGrid from "./EventsGrid";
 import HighlightBanner from "./HighlightBanner";
 import React, { Suspense, lazy } from "react";
@@ -91,9 +92,12 @@ const EventsSection = ({ title, highlightColor: highlightColorProp }) => {
 
   return (
     <section className="max-w-5xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6" style={{ color: highlightColor }}>
-        {title}
-      </h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-3xl font-bold" style={{ color: highlightColor }}>
+          {title}
+        </h1>
+        <ThemeToggle />
+      </div>
 
       <HighlightBanner show={filteredEvents.length > 3}>
         Wow! There are many charity events happening. Join and make a difference!

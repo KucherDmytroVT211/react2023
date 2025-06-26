@@ -35,8 +35,8 @@ const EventCard = ({ id, title, description, date, location, onSelect }) => {
         type="button"
         onClick={toggleLike}
         className={`self-start text-sm font-medium px-3 py-1 rounded-lg transition-colors hover:opacity-90 ${liked
-            ? "bg-red-100 text-red-600"
-            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+          ? "bg-red-100 text-red-600"
+          : "bg-gray-100 text-gray-600 hover:bg-gray-200"
           }`}
       >
         {liked ? "♥ Liked" : "♡ Like"}

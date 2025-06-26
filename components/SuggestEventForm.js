@@ -32,9 +32,9 @@ export default function SuggestEventForm() {
             onSubmit={handleSubmit(onSubmit)}
             className="max-w-xl mx-auto bg-white rounded-lg shadow p-6 mt-10"
         >
-            <h2 className="text-xl font-bold mb-4">Suggest a Charity Event</h2>
+            <h2 className="text-xl font-bold mb-4 text-black dark:text-black">Suggest a Charity Event</h2>
             <div className="mb-4">
-                <label className="block mb-1 font-medium">Event Name</label>
+                <label className="block mb-1 font-medium text-black dark:text-black">Event Name</label>
                 <input
                     type="text"
                     {...register("name")}
@@ -45,7 +45,7 @@ export default function SuggestEventForm() {
                 )}
             </div>
             <div className="mb-4">
-                <label className="block mb-1 font-medium">Description</label>
+                <label className="block mb-1 font-medium text-black dark:text-black">Description</label>
                 <textarea
                     {...register("description")}
                     className="w-full border rounded p-2 focus:outline-none focus:ring"
@@ -55,7 +55,7 @@ export default function SuggestEventForm() {
                 )}
             </div>
             <div className="mb-4">
-                <label className="block mb-1 font-medium">Date</label>
+                <label className="block mb-1 font-medium text-black dark:text-black">Date</label>
                 <input
                     type="date"
                     {...register("date")}
@@ -66,7 +66,7 @@ export default function SuggestEventForm() {
                 )}
             </div>
             <div className="mb-4">
-                <label className="block mb-1 font-medium">Location</label>
+                <label className="block mb-1 font-medium text-black dark:text-black">Location</label>
                 <input
                     type="text"
                     {...register("location")}
