@@ -47,9 +47,8 @@ const SAMPLE_EVENTS = [
 export default function CharityEventsPage() {
   return (
     <EventsSection
-      initialEvents={SAMPLE_EVENTS}
       title="Charity Events List"
-      highlightColor="#16a34a" 
+      highlightColor="#16a34a"
     />
   );
 }
